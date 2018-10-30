@@ -1,0 +1,42 @@
+/*body为整个页面设置样式*/
+body {
+	font-family: sans-serif;
+}
+
+h1, h2 {    
+	color: gray;
+}
+
+h1 { 
+	border-bottom: 1px solid black;
+}
+
+p {
+	color: maroon;
+}
+
+/*创建一个类选择器，并选择这个类中的一个元素
+类中的元素.类名*/
+p.greentea {
+	color: green;
+}
+
+p.raspberry {
+	color: blue;
+}
+
+p.blueberry {
+	color: purple;
+}
+/*为<em>提供一个特定的规则来覆盖继承*/
+/* em {
+	font-family: serif;
+} */
+
+
+/*
+注:
+如果由于两个选择器有相同的特定性而无法解决冲突，就要利用
+样式表文件中规则的顺序来解决问题。应该使用CSS文件中最后
+列出的规则
+*/
