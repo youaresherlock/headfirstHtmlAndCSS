@@ -1,0 +1,44 @@
+@font-face{
+    font-family: "Emblema One";
+    src: url("http://wickedlysmart.com/hfhtmlcss/chapter8/journal/EmblemaOne-Regular.woff"),
+    url("http://wickedlysmart.com/hfhtmlcss/chapter8/joournal/EmblemaOne-Regular.ttf");
+}
+
+body {
+    font-family: Verdana, Geneva, Arial, sans-serif;
+    /*
+    可以使用px、em、百分比、关键字来指定字体的大小
+    关键字有xx-small, x-small, small, medium, large, x-large, xx-large几种选择
+    small一般情况下是12px.后一个比前一个大百分之20。
+    浏览器默认的字体大小基本上都是16px
+    */
+    font-size: small; 
+
+    /*如果使用
+    body{
+        font-size: 100%;
+    } 指的是浏览器默认大小16px的百分之百*/
+}
+
+h1, h2{
+    color: #cc6600;
+    /*文本装饰可以为文本增加一些装饰性的效果，如下划线、删除线、上划线
+    text-decoration: underline;*/
+    /* 如果想要不继承父标签的文本装饰，可以使用值"none"来去除装饰
+    text-decoration: none;*/
+    border-bottom: thin dotted #888888;
+}
+
+h1{
+    font-family: "Emblema One", sans-serif;
+    font-size: 220%;
+}
+
+h2 {
+    font-size: 130%;
+    font-weight: normal; /*默认下是bold值(粗体), 变为normal浅色*/
+}
+
+blockquote {
+    font-style: italic;
+}

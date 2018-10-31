@@ -1,0 +1,20 @@
+body {
+    font-size: small;
+    font-family: Verdana,Geneva, Helvetica, Arial, sans-serif;
+    line-height: 1.6em; 
+    /*增加行间距可以改善可读性，这样做还可以使页面之间形成不同对比，产生反差
+    1.6em表示的是字体大小的1.6倍*/
+}
+
+h1, h2{
+    color: #007e7e;
+}
+
+h1{
+    font-size: 150%;
+}
+
+h2{
+    font-size: 130%;
+}
+
