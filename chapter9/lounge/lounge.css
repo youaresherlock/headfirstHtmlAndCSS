@@ -18,3 +18,23 @@ h2{
     font-size: 130%;
 }
 
+#guarantee {
+    line-height: 1.9em;
+    font-style: italic;
+    font-family: Georgia, "Times New Roman", Times, serif; 
+    color: #444444;
+    /*为了提供一个锯齿线边框，我们可以将color设置为白色，线为破折线型dashed*/
+    border-color: white;
+    border-width: 1px;
+    border-style: dashed;
+    background-color: #a7cece;
+    padding: 25px; /*两者的顺序很重要，相反会被覆盖*/
+    padding-left: 80px;
+    margin: 30px;
+    margin-right: 250px;
+    /*background-image属性设置一个url,可以是一个相对属性，也可以是一个完整的ulr(http://...)*/
+    background-image: url(images/background.gif);
+    /*默认下，背景图像是重复的;位置默认是左上角*/
+    background-repeat: no-repeat; /*有五种选择, repeat、no-repeat、repeat-x、repeat-y、inherit*/
+    background-position: top left;
+}
