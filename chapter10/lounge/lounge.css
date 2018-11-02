@@ -1,7 +1,9 @@
 body {
-  font-size:           small;
+  /* font-size:           small;
   font-family:         Verdana, Helvetica, Arial, sans-serif;
-  line-height:         1.6em;
+  line-height:         1.6em; */
+  /*这里可以使用简写的方式*/
+  font: small/1.6em Verdana, Helvetica, Arial, sans-serif;
 }
 
 h1, h2 {
@@ -32,4 +34,64 @@ h2 {
   background-image:    url("images/background.gif");
   background-repeat:   no-repeat;
   background-position: top left;
+}
+
+/* 有一个<div>包围饮料区的所有元素，id选择器来设置样式 */
+#elixirs{
+  border-width: thin;
+  border-style: solid;
+  border-color: #007e7e;
+  width: 200px;
+
+  padding-right: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+
+  margin-left: 20px;
+
+  /*text-align是一个基本的属性，它会影响一个元素中的文本行
+  互相之间的对齐方式 left、right和center 会对块元素中的所有内联内容对齐*/
+  text-align: center; 
+
+  background-image: url(images/cocktail.gif);
+  background-repeat: repeat-x;
+}
+
+/* 使用后代选择器， 将饮料区的h2标题设置为黑色,h3标题设置为红色 */
+#elixirs h2{
+  color: black;
+}
+
+#elixirs h3{
+  color: red;
+}
+
+/*
+使用line-height属性设置行间的距离
+可能的值有
+number 设置数字，此数字会与当前的字体尺寸相乘来设置行间距
+length 设置固定的行间距
+% 基于当前字体尺寸的百分比行间距
+inherit 规定应该从父元素继承line-height属性的值
+normal 默认。设置合理的行间距。
+在这里我们希望h2的行间距是自己字体高度的1倍，而不是div继承下来的font-size: small;
+small一般指的是12px
+*/
+#elixirs {
+  line-height: 1;
+}
+
+#footer{
+  font-size: 50%;
+  text-align: center;
+  line-height: normal;
+  margin-top: 30px;
+}
+
+.cd{
+  font-style: italic;
+}
+
+.artist{
+  font-weight: bold;
 }
