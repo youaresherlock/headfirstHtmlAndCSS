@@ -88,10 +88,53 @@ small一般指的是12px
   margin-top: 30px;
 }
 
+/*
+我们要分别指定CD以及对应的艺术家名字
+CD用斜体显示，艺术家名用粗体显示
+*/
+
 .cd{
   font-style: italic;
 }
 
 .artist{
   font-weight: bold;
+}
+
+/* 链接的状态有link、visited、hover、focus、active*/
+/* a:link {
+  color: green;
+}
+
+a:visited {
+  color: red;
+}
+
+a:hover {
+  color: yellow;
+}
+
+a:active{
+  color: blue
+} */
+
+a:link{
+  color: #007e7e;
+}
+
+a:visited{
+  coor: #333333;
+}
+
+#elixirs a:link{
+  color: #007e7e;
+}
+
+#elixirs a:visited{
+  color: #333333;
+}
+
+#elixirs a:hover{
+  background: #f88396;
+  color: #0d5353;
 }
