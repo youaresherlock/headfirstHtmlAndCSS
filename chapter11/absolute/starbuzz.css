@@ -8,14 +8,15 @@ body {
 #header {
   background-color: #675c47;
   margin:           10px;
-  height:           108px;
+  height:           108px; /*这个是内容区的高度*/
 }
 
 #main {
   background:       #efe5d0 url(images/background.gif) top left;
   font-size:        105%;
   padding:          15px;
-  margin:           0px 10px 10px 10px;
+  /*浏览器上下放置两个块元素时，它会把它们共同的外边距折叠在一起，取大的部分*/
+  margin:           0px 330px 10px 10px; 
 }
 
 #sidebar {
@@ -23,6 +24,11 @@ body {
   font-size:        105%;
   padding:          15px;
   margin:           0px 10px 10px 10px;
+  /*在这里我们使用绝对定位，要让边栏绝对定位*/
+  position: absolute;
+  top: 128px;
+  right: 0px;
+  width: 280px;
 }
 
 #footer {
