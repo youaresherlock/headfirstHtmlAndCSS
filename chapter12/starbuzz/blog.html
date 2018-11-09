@@ -2,8 +2,8 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Starbuzz Coffee - Blog</title>
-    <link rel="stylesheet" type="text/css" href="starbuzz.css">
+	<title>Starbuzz Coffee - Blog</title>
+	<link rel="stylesheet" type="text/css" href="starbuzz.css">
   </head> 
 
   <body>
@@ -12,7 +12,17 @@
            src="images/headerLogo.gif" alt="Starbuzz Coffee header logo image">
       <img id="headerSlogan"
           src="images/headerSlogan.gif" alt="Providing all the caffeine you need to power your life.">
-    </header>
+	</header>
+	
+	<nav>
+	<ul>
+		<li><a href="index.html">HOME</a></li>
+		<li class="selected"><a href="blog.html">BLOG</a></li>
+		<li><a href="">INVENTIONS</a></li>
+		<li><a href="">RECIPES</a></li>
+		<li><a href="">LOCATIONS</a></li>
+	</ul>
+	</nav>
 
 	<div id="tableContainer">
 	<div id="tableRow">
@@ -38,9 +48,38 @@
 
 	<section id="blog">
 	<article>
+		<header>
+			<h1>Starbuzz launches... Tweet Sip</h1>
+			<time datetime="2012-05-03">5/3/2012</time>
+		</header>
+		<p>
+			As promised, today I'm proud to announce that Starbuzz
+			Coffee is launching the Tweet Sip cup, a special Starbuzz
+			Coffee cup that tweets each time you take a sip! Check
+			out my video of our new invention.
+		</p>
+		<!--  在HTML中显示视频的最简单的方法是使用优酷等视频网站
+		<embed src="http://player.youku.com/player.php/sid/XMzI2NTc4NTMy/v.swf" 
+		width="480" height="400" 
+		type="application/x-shockwave-flash"> -->
+		<!-- poster属性提供一个可选的海报图像，视频未播放时就会显示这个图像 -->
+		<video controls autoplay width="512" height="288" poster="images/poster.png"
+		 id="video">
+		 <!--
+			src: 规定媒体文件的url
+			type: 规定媒体文件的MIME类型 codecs说明了视频编解码、音频编解码格式
+		 -->
+			<source src="video/tweetsip.mp4" type='video/mp4; codecs="avc1.4201E, mp4a.40.2"'>
+			<source src="video/tweetsip.webm" type='video/webm; codecs="vp8, vorbis"'>
+			<source src="video/tweetsip.ovg" type='video/ogg; codecs="theora, vorbis"'>
+			<p>Sorry, your browser doesn't support  the video element</p>
+		</video>
+	</article>
+	<HR style="FILTER: alpha(opacity=100,finishopacity=0,style=3)" width="100%"; color=#954b4b SIZE=2>
+	<article>
 	<header>
 		<h1>Starbuzz meets social media</h1>
-		<time datetime="2012-03-12">3/12/2012</time>
+		<time datatime="2012-03-12">3/12/2012</time>
 	</header>
 	<p>
 		Here at Starbuzz we're embracing the social media craze. 
@@ -66,7 +105,7 @@
 		new invention, straight from Starbuzz Coffee.
 	</p>
 	</article>
-
+	<HR style="FILTER: alpha(opacity=100,finishopacity=0,style=3)" width="100%" color=#954b4b SIZE=2>
 	<article>
 	<header>
 		<h1>Starbuzz uses computer science</h1>
@@ -95,10 +134,10 @@
 		staff you never see) as the customer flow grows.
 	</p>
 	</article>
-
+	<HR style="FILTER: alpha(opacity=100,finishopacity=0,style=3)" width="100%" color=#954b4b SIZE=2>
 	<article>
 	<header>
-		<h1>Most unique patron of the month	</h1>
+		<h1>Most unique patron of the month</h1>
 		<time datetime="2012-02-18">2/18/2012</time>
 	</header>
 	<p>

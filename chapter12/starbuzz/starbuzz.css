@@ -16,11 +16,11 @@ body {
 header.top {
   background-color: #675c47;
   margin: 10px 10px 0px 10px;
-  height:           108px;
+  height: 108px;
 }
 
 header.top img#headerSlogan {
-	float: right;
+  float: right;
 }
 
 
@@ -41,12 +41,15 @@ section#drinks {
     vertical-align: top;
 }
 
-/* added section#blog for blog */
+/* added section#blog for blog
+通过使用两个id选择器(用逗号分离), 可以对这两个<section>元素使用相同的规则 
+虽然("main" <section> 和 "blog" <section>)在不同的页面上，也可以这样选择，
+因为这两个页面都链接到相同的CSS文件*/
 section#main, section#blog {
-  display: table-cell;
-  background:       #efe5d0 url(images/background.gif) top left;
-  font-size:        105%;
-  padding:          15px;
+  display:table-cell;
+  background: #efe5d0 url(images/background.gif) top left;
+  font-size: 105%;
+  padding: 15px;
   vertical-align: top;
 }
 
@@ -92,30 +95,56 @@ a:visited {
   border-bottom:    thin dotted #675c47;
 }
 
+/* ul {
+  background-color: #efe5d0;
+  增加背景颜色，内边距和外边距
+  下外边距为0，因为表格显示中上方已经有10像素的边框距离border-spacing
+  margin: 10px 10px 0px 10px; 
+  padding:5px 0px 5px 0px;
+  list-style-type: none; 删除列表前小标志
+}
+
+ul li{
+  display: inline;  列表项的前后不会再有换行，像常规的内联元素一样在页面上流入一行
+  padding: 5px 10px 5px 10px;
+}
+
+ul li a:link, ul li a:visited {
+  color: #954b4b;
+  border-bottom: none;
+  font-weight: bold; 粗体，默认值为normal
+}
+
+ul li.selected {
+  background-color: #c8b99c;
+} */
+
+
+/*为了让CSS更特定， 我们使用nav元素来指定样式*/
 
 nav {
-    background-color: #efe5d0;
-	margin: 10px 10px 0px 10px;
+  background-color: #efe5d0;
+  margin: 10px 10px 0px 10px;
 }
-nav ul {
-	margin: 0px;
-	list-style-type: none;
-	padding: 5px 0px 5px 0px;
-}
-nav ul li {
-	display: inline;
-	padding: 5px 10px 5px 10px;
-}
-nav ul li a:link, nav ul li a:visited {
-	color: #954b4b;
-	border-bottom: none;
-	font-weight: bold;
 
-/*
-	text-shadow: 1px 1px 3px #e2c2c2; 
-	text-transform: uppercase;
-*/
+nav ul {
+  list-style-type: none;
+  padding: 5px 0px 5px 0px;
 }
+
+nav ul li {
+  display: inline;
+  padding: 5px 10px 5px 10px;
+}
+
+nav ul li a:link, nav ul li a:visited {
+  color: #954b4b;
+  border-bottom: none;
+  font-weight: bold;
+}
+
 nav ul li.selected {
-	background-color: #c8b99c;
+  background-color: #c8b99c;
 }
+
+
