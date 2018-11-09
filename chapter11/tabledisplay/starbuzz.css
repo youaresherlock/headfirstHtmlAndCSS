@@ -89,4 +89,23 @@ a:visited {
   position: absolute;
   top: 30px;
   left: 365px;
+  /*
+  默认的页面上各个元素的z-index值一般由浏览器来决定，通常只需要
+  把z-index设置为1，这就足以确保元素出现在页面中其他元素的上面
+  */
+}
+
+#coupon {
+  /*使用固定定位*/
+  position: fixed;
+  top: 350px;
+  /*
+  这里有两种方法来改变优惠劵的图像，可以直接通过ps改变照片;
+  也可以使图像的左边定位在比视窗边界更左的位置。
+  */
+  left: -90px;
+}
+
+#coupon a,img {
+  border: none;
 }

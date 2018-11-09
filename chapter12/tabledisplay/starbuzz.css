@@ -1,0 +1,86 @@
+body { 
+  background-color: #b5a789;
+  font-family:      Georgia, "Times New Roman", Times, serif;
+  font-size:        small;
+  margin:           0px;
+}
+
+header {
+  background-color: #675c47;
+  /*border-spacing和外边距创建的空间不会折叠，因此下边距应该为0px*/
+  margin:           10px 10px 0px 10px;
+  height:           108px;
+}
+
+section#main {
+  display: table-cell;
+  background:       #efe5d0 url(images/background.gif) top left;
+  font-size:        105%;
+  padding:          15px;
+  vertical-align: top;
+}
+
+aside {
+  display: table-cell;
+  background:       #efe5d0 url(images/background.gif) bottom right;
+  font-size:        105%;
+  padding:          15px;
+  vertical-align: top;
+}
+
+footer {
+  background-color: #675c47;
+  color:            #efe5d0;
+  text-align:       center;
+  padding:          15px;
+  margin:           0px 10px 10px 10px;
+  font-size:        90%;
+}
+
+h1 {
+  font-size:        120%;
+  color:            #954b4b;
+}
+
+.slogan { color: #954b4b; }
+
+.beanheading {
+  text-align:       center;
+  line-height:      1.8em;
+}
+
+a:link {
+  color:            #b76666;
+  text-decoration:  none;
+  border-bottom:    thin dotted #b76666;
+}
+a:visited {
+  color:            #675c47;
+  text-decoration:  none;
+  border-bottom:    thin dotted #675c47;
+}
+
+#tableContainer {
+  display: table;
+  /*border-spacing属性创建了一个10像素的间距，这会在单元格之间增加10像素空间，另外在边界周围
+  也会增加10像素的空间
+  border-spacing和外边距创建的空间不会折叠。所以最后页眉和两列之间就有20像素的空
+  间，另外两列与页脚之间也有20像素的空间*/
+  border-spacing: 10px;
+}
+
+#tableRow {
+  display: table-row;
+}
+
+section#drinks {
+  display: table-cell;
+  background-color: #efe5d0;
+  width: 20%;
+  padding: 15px;
+  vertical-align: top;
+}
+
+header img#headerSlogan {
+  float: right;
+}
