@@ -1,0 +1,83 @@
+@font-face {
+	font-family: "Emblema One";
+	src: url("http://wickedlysmart.com/hfhtmlcss/chapter8/journal/EmblemaOne-Regular.woff"), 
+	     url("http://wickedlysmart.com/hfhtmlcss/chapter8/journal/EmblemaOne-Regular.ttf"); 
+}
+body {
+  font-family:     Verdana, Geneva, Arial, sans-serif;
+  font-size:       small;
+}
+h1, h2 {
+  color:           #cc6600;
+  border-bottom:   thin dotted #888888;
+}
+h1 {
+  font-family:     "Emblema One", sans-serif;
+  font-size:       220%;
+}
+h2 {
+  font-size:       130%;
+  font-weight:     normal;
+}
+blockquote {
+  font-style:      italic;
+}
+
+table {
+  margin-left: 20px;
+  margin-right: 20px;
+  border: thin solid black;
+  /*设置标题的位置 top/bottom/inherit*/
+  caption-side: bottom;
+  /*设置是否把表格边框合并为单一的边框*/
+  border-collapse: collapse;
+}
+
+td, th {
+  border: thin dotted gray;
+  padding: 5px;
+}
+
+caption {
+  font-style: italic;
+  padding-top: 8px;
+}
+
+/*用类选择器将日期、温度和用餐评分居中对齐;
+让海拔高度和人口右对齐*/
+.center {
+  text-align: center;
+}
+
+.right {
+  text-align: right;
+}
+
+th {
+  background-color: #cc6600;
+}
+
+/*对表格着色的一种常用的方法是为各行指定交替的颜色，这样更容易区分各行
+方法1:*/
+/* .cellcolor {
+  background-color: #fcba7a;
+}
+
+.othercellcolor {
+  background-color: 	#ffdeaf;
+} */
+
+/*
+方法2:
+我们选择CSS3 nth-child(n)选择器，用于匹配属于其父元素的第几个元素
+除了使用2n,2n+1;也可以使用even/odd表示奇数和偶数行
+*/
+tr:nth-child(2n) {
+  background-color: #fcba7a;
+}
+
+tr:nth-child(2n+1) {
+  background-color: #ffdeaf;
+}
+
+/*我们需要让单元格跨多行，因此上面指定奇偶行颜色就不行了*/
