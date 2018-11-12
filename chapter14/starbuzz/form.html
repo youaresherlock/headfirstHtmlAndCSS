@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>The Starbuzz Bean Machine</title>
+  </head>
+  <body>
+
+    <h1>The Starbuzz Bean Machine</h1>
+    <h2>Fill out the form below and click submit to order</h2>
+    <form action="http://starbuzzcoffee.com/processorder.php" method="GET">
+      <p>
+        Choose your beans:
+        <select name="beans">
+          <!--value定义送往服务器的选项值
+          浏览器将表单元素的名和值打包时，它会使用<select>元素的名和所选选项的值
+          . 如果选择Bolivia选项，则浏览器会向服务器发送beans="Bolivia"-->
+          <option value="House Blend">House Blend</option>
+          <option value="Boliva">Shade Grown Boliva Supremo</option>
+          <option value="Guatemala">Organic Guatemala</option>
+          <option value="Kenya">Kenya</option>
+        </select>
+      </p>
+      <p>
+        Type: <br>
+        <!-- name一样，同组的所有单选框都有相同的名字， value是将要发送到服务器脚本
+        的值。只会提交表单时发送选中的那个单选按钮的值-->
+        <input type="radio" name="beantype" value="whole"> Whole bean<br>
+        <!--checked属性规定在页面加载时应该被预先选定的input元素-->
+        <input type="radio" name="beantype" value="ground" checked> Ground
+        <!--
+          <input type="radio" name="beantype" value="ground" checked="checked">Ground
+        -->
+      </p>
+      <p>
+        <!--min和max属性配合使用，来创建合法值的范围-->
+        Number of bags: <input type="number" name="bags" min="1" max="10">
+      </p>
+      <p>
+        Must arrive by date: <input type="date" name="date">
+      </p>
+
+      <p>
+        Extras: <br>
+        <input type="checkbox" name="extras[]" value="giftwrap">Gift wrap<br>
+        <input type="checkbox" name="extras[]" value="catalog" checked>Include catalog
+        with order
+      </p>
+
+      <p>Ship tp: <br>
+        Name: <input type="text" name="name"> <br>
+        Address: <input type="text" name="address"> <br>
+        City: <input type="text" name="city"> <br>
+        State: <input type="text" name="state"> <br>
+        Zip: <input type="text" name="zip"> <br>
+        Phone: <input type="tel" name="phone"> <br>
+      </p>
+
+      <p>Customer Comments:<br>
+        <textarea name="comments"></textarea>
+      </p>
+      <p>
+        <!--value属性为这个输入域提供默认文本-->
+        <input type="submit" value="Order Now">
+      </p>
+    </form>
+  </body>
+</html>
+

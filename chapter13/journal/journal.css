@@ -81,3 +81,29 @@ tr:nth-child(2n+1) {
 }
 
 /*我们需要让单元格跨多行，因此上面指定奇偶行颜色就不行了*/
+
+table table th {
+  background-color: rgb(250, 167, 167);
+}
+
+/*我们用另一种方法来分别选择让Tony和Tess的表行有不同的背景颜色*/
+/* table table tr:nth-child(2n + 1) td, table table tr:nth-child(2n + 1) th {
+  background-color: rgb(70, 102, 172);
+}
+
+table table tr:nth-child(even) td, table table tr:nth-child(even) th {
+  background-color: rgb(206, 36, 87);
+} */
+
+
+/*可以为列表增加一些样式 
+对<ul>设置list-style-type这个属性，那么<li>元素会继承<ul>元素设置的样式
+list-stype: 简写属性
+list-style-image: 将图像设置为列表项标志
+list-style-position: 列表项标志的位置
+list-style-type 设置列表项标志的类型*/
+li {
+  list-style-image: url(images/backpack.gif);
+  padding-top: 5px;
+  margin-left: 20px;
+}

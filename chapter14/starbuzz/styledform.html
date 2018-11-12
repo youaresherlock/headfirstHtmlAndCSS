@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>The Starbuzz Bean Machine</title>
+	<link rel="stylesheet" href="starbuzz.css">
+	<link rel="stylesheet" href="styledform.css">
+  </head>
+  <body>
+
+    <h1>The Starbuzz Bean Machine</h1>
+    <h2>Fill out the form below and click "order now" to order</h2>
+
+    <form action="http://www.starbuzzcoffee.com/processorder.php" method="POST">
+	<div class="tableRow">
+		<p>
+          Choose your beans:
+		</p>
+		<p>
+            <select name="beans">
+              <option value="House Blend">House Blend</option>
+              <option value="Bolivia">Shade Grown Bolivia Supremo</option>
+              <option value="Guatemala">Organic Guatemala</option>
+              <option value="Kenya">Kenya</option>
+            </select>
+		</p>
+	</div>
+	<div class="tableRow">
+		<p> Type: </p>
+		<p>
+            <input type="radio" name="beantype" value="whole"> Whole bean<br>
+            <input type="radio" name="beantype" value="ground" checked> 
+            Ground
+		</p>
+	</div>
+	<div class="tableRow">
+		<p> Number of bags: </p>
+		<p> <input type="number" name="bags" min="1" max="10"> </p>
+	</div>
+	<div class="tableRow label">
+		<p> Must arrive by date: </p>
+		<p> <input type="date" name="date"> </p>
+	</div>
+	<div class="tableRow">
+		<p> Extras: </p>
+		<p>
+            <input type="checkbox" name="extras[]" value="giftwrap"> Gift wrap<br>
+            <input type="checkbox" name="extras[]" value="catalog" checked>
+            Include catalog with order
+		</p>
+	</div>
+	<div class="tableRow">
+		<p class="heading"> Ship to </p>
+		<p></p>
+	</div>
+	<div class="tableRow">
+		<p> Name: </p>
+		<!--placeholder属性提供可描述输入字段预期值的提示信息(hint)-->
+		<!--required规定必需在提交之前填写输入字段 required是一个布尔属性-->
+		<p> <input type="text" name="name" value="Clarence" placeholder="Buckaroo Banzai" required> </p>
+	</div>
+	<div class="tableRow">
+		<p> Address: </p>
+		<!--text<input>元素中的value属性可用来为单行文本输入控件提供一个初始值-->
+		<p> <input type="text" name="address" value="China" placeholder="Banzai Institute" required> </p>
+	</div>
+	<div class="tableRow">
+		<p> City: </p>
+		<p> <input type="text" name="city" value="Xi'an" placeholder="Los Angeles" required> </p>
+	</div>
+	<div class="tableRow">
+		<p> State: </p>
+		<p> <input type="text" name="state" value="" placeholder="CA" required> </p>
+	</div>
+	<div class="tableRow">
+		<p> Zip: </p>
+		<p> <input type="text" name="zip" value="" placeholder="90050" required> </p>
+	</div>
+	<div class="tableRow">
+		<p> Phone: </p>
+		<p> <input type="tel" name="phone" value="" placeholder="310-555-1212" required> </p>
+	</div>
+	<div class="tableRow">
+		<p> Customer Comments: </p>
+		<p>
+			<!--  将文本放在<textarea>元素的内容中，则会成为WEB页面上文本区控件
+				中的默认文本-->
+            <textarea name="comments"></textarea>
+		</p>
+	</div>
+	<div class="tableRow">
+		<!-- 对于最后一行， 左列有一个空的单元格，所以同样的，放置一个空的<p>元素-->
+		<p></p>
+		<p> <input type="submit" value="Order Now"> </p>
+	</div>
+    </form>
+  </body>
+</html>
+
